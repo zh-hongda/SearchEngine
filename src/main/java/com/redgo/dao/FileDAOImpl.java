@@ -5,6 +5,7 @@ import com.redgo.entity.Event;
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
+import org.apache.solr.client.solrj.impl.CloudSolrClient;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
@@ -21,7 +22,8 @@ import java.util.Map;
 public class FileDAOImpl implements FileDAO{
 
     @Autowired
-    private SolrClient solrClient;
+//    private SolrClient solrClient;
+    public CloudSolrClient solrClient;
 
     @Override
     public HashMap<String, Object> findAll(String queryString, String page, String powerStation, String unit, String docType){
@@ -31,6 +33,7 @@ public class FileDAOImpl implements FileDAO{
             response = new HashMap<>();
 
             Integer pageNumb = Integer.parseInt(page);
+            solrClient.setDefaultCollection("core2");
 
             SolrQuery params = new SolrQuery();
 
