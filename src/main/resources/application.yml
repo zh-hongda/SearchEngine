@@ -4,7 +4,10 @@ server:
 spring:
   data:
     solr:
-      host: http://localhost:8989/solr/collection1
+      host: http://127.0.0.1:8180/solr
+      repositories:
+        enabled: true
+      zk-host: 127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183
 
   mvc:
     view:
