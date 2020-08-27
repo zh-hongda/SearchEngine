@@ -8,10 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SearchEngine" />
+        <module name="ectract" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bootstrap" target="1.7" />
+      <module name="ectract" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

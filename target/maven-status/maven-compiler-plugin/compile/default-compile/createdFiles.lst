@@ -1,9 +1,0 @@
-com\redgo\entity\FileWord.class
-com\redgo\Application.class
-com\redgo\controller\SearchConfig.class
-com\redgo\dao\FileDAOImpl.class
-com\redgo\dao\FileDAO.class
-com\redgo\entity\Event.class
-com\redgo\controller\NucPowerController.class
-com\redgo\service\FileService.class
-com\redgo\service\FileServiceImpl.class
