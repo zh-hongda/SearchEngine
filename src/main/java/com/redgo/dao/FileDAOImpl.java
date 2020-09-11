@@ -44,7 +44,7 @@ public class FileDAOImpl implements FileDAO{
                         .setHighlight(true)//开启高亮
                         .setHighlightSimplePre("<span style='color:red;'>")//高亮的开始标签
                         .setHighlightSimplePost("</span>")//高亮的结束标签
-                        .addHighlightField("id,JIT_text")//高亮字段
+                        .addHighlightField("JIT_title,JIT_text")//高亮字段
                         .set("df","JIT_keyWord")
                         .set("start", pageNumb * 14)//开始条数
                         .set("rows", 14)
@@ -84,10 +84,10 @@ public class FileDAOImpl implements FileDAO{
                     Map<String, List<String>> listMap = highlighting.get(result.get("id"));
 
                     //处理id高亮
-                    if(listMap.containsKey("id")){
-                        fileWord.setFile(listMap.get("id").get(0).toString());
+                    if(listMap.containsKey("JIT_title")){
+                        fileWord.setFile(listMap.get("JIT_title").get(0).toString());
                     }else{
-                        fileWord.setFile(result.get("id").toString());
+                        fileWord.setFile(result.get("JIT_title").toString());
                     }
                     //处理file_text高亮
                     if(listMap.containsKey("JIT_text")){
