@@ -13,3 +13,9 @@ spring:
     view:
       prefix: /
       suffix: .jsp
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/searchengine?characterEncoding=utf8
+    username: root
+    password: root
